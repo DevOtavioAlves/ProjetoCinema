@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detalhes do Filme</title>
+</head>
+<body>
+    <h1>Detalhes do Filme: <span th:text="${filme.titulo}"></span></h1>
+    <p>Sinopse: <span th:text="${filme.sinopse}"></span></p>
+    <p>Gênero: <span th:text="${filme.genero}"></span></p>
+    <p>Ano de Lançamento: <span th:text="${filme.anoLancamento}"></span></p>
+</body>
+</html>

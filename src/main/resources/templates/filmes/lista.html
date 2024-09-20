@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+         <head>
+                  <title>Filmes</title>
+         </head>
+         <body>
+                  <h1>Lista de Filmes</h1>
+                  <a th:href="@{/filmes/formulario}">Adicionar Novo Filme</a>
+                  <ul>
+                           <li th:each="filme : ${filmes}">
+                                    <a th:href="@{/filmes/{id}(id=${filme.id})}" th:text="${filme.titulo}"></a>
+                           </li>
+                  </ul>
+         </body>
+</html>
