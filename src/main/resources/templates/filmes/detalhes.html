@@ -4,9 +4,18 @@
     <title>Detalhes do Filme</title>
 </head>
 <body>
-    <h1>Detalhes do Filme: <span th:text="${filme.titulo}"></span></h1>
-    <p>Sinopse: <span th:text="${filme.sinopse}"></span></p>
-    <p>Gênero: <span th:text="${filme.genero}"></span></p>
-    <p>Ano de Lançamento: <span th:text="${filme.anoLancamento}"></span></p>
+    <h1>${filme.titulo}</h1>
+<p>${filme.sinopse}</p>
+<p>${filme.genero} - ${filme.ano}</p>
+
+<h2>Análises</h2>
+<ul>
+    <li th:each="analise : ${analises}">
+        <p th:text="${analise.texto}"></p>
+        <p>Nota: <span th:text="${analise.nota}"></span></p>
+    </li>
+</ul>
+
+<a href="/filmes/${filme.id}/analisar">Adicionar Análise</a> <!-- Botão para adicionar análise -->
 </body>
 </html>

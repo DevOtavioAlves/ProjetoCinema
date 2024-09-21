@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Adicionar Análise</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="/filmes/${filmeId}/analisar" method="post">
+    <textarea name="texto" placeholder="Escreva sua análise" required></textarea>
+    <input type="number" name="nota" min="0" max="10" placeholder="Nota (0-10)" required>
+    <button type="submit">Enviar Análise</button>
+        </form>
+    </body>
+</html>

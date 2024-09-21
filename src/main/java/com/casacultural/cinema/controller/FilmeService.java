@@ -11,7 +11,7 @@ import java.util.Map;
          public class FilmeService {
 
                   private Map<Long, Filme> filmes = new HashMap<>();
-                  
+                  private long proximoId = 3L;
                   
                   public FilmeService() {
 
@@ -30,5 +30,12 @@ import java.util.Map;
 
                            return filmes.get(id);
 
+                  }
+                  
+                  public void adicionarFilme(Filme filme) {
+                      
+                           filme.setId(proximoId++); // Define um ID único para o novo filme
+                           filmes.put(filme.getId(), filme); // Adiciona o filme ao Map
+        
                   }
          }
