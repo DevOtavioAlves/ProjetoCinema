@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cadastro de Paciente</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Cadastro de Paciente</h1>
+<form th:action="@{/pacientes/salvar}" th:object="${paciente}" method="post">
+    <label>Nome:</label>
+    <input type="text" th:field="*{nome}" required/><br/>
+    <label>Endereço:</label>
+    <input type="text" th:field="*{endereco}" required/><br/>
+    <label>Telefone:</label>
+    <input type="text" th:field="*{telefone}" required/><br/>
+    <button type="submit">Salvar</button>
+</form>
+<a href="/pacientes">Voltar</a>
+</body>
+</html>
